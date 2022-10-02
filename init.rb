@@ -1,4 +1,4 @@
-require 'redmine_editauthor'
+require File.dirname(__FILE__) + '/lib/redmine_editauthor'
 
 Redmine::Plugin.register :redmine_editauthor do
   name "Redmine Edit Issue Author"
@@ -17,5 +17,3 @@ Redmine::Plugin.register :redmine_editauthor do
     permission :set_original_issue_author, {}
   end
 end
-
-RedmineEditauthor.install

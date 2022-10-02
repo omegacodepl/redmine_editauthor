@@ -6,6 +6,11 @@ module RedmineEditauthor
       # necessary for using content_tag in Listener
       attr_accessor :output_buffer
 
+
+      def controller_issues_edit_before_save(obj)
+        puts obj
+      end
+
       def view_issues_form_details_bottom(context = {})
         issue, project = context.values_at(:issue, :project)
 

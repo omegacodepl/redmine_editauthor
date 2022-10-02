@@ -1,7 +1,7 @@
 module RedmineEditauthor
   module Patches
     module IssuePatch
-      def self.included(base)
+      def self.prepended(base)
         base.class_eval do
           safe_attributes 'author_id',
                           :if => proc { |issue, user|
@@ -14,3 +14,5 @@ module RedmineEditauthor
     end
   end
 end
+
+Issue.prepend RedmineEditauthor::Patches::IssuePatch
