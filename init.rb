@@ -1,5 +1,3 @@
-require File.dirname(__FILE__) + '/lib/redmine_editauthor'
-
 Redmine::Plugin.register :redmine_editauthor do
   name "Redmine Edit Issue Author"
   author "Ralph Gutkowski"
